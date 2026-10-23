@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFC"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="22dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="24dp">
+
+        <!-- HEADER -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AI Study Assistant"
+            android:textColor="#0F172A"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Ask questions, understand concepts and prepare smarter."
+            android:textColor="#64748B"
+            android:textSize="14sp" />
+
+        <!-- STUDY MODE -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="1dp"
+            app:strokeColor="#E2E8F0"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="STUDY MODE"
+                    android:textColor="#475569"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#F8FAFC"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp">
+
+                    <Spinner
+                        android:id="@+id/spinnerMode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="#2563EB" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- AI RESPONSE -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="1dp"
+            app:strokeColor="#E2E8F0"
+            app:strokeWidth="1dp">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/scrollChat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="false"
+                android:overScrollMode="always"
+                android:scrollbars="vertical">
+
+                <TextView
+                    android:id="@+id/tvChat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="CampusMind AI&#10;&#10;Ask me anything about your studies."
+                    android:textColor="#1E293B"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="5dp" />
+
+            </androidx.core.widget.NestedScrollView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- QUESTION -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="1dp"
+            app:strokeColor="#E2E8F0"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="YOUR QUESTION"
+                    android:textColor="#475569"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etQuestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#F8FAFC"
+                    android:gravity="top|start"
+                    android:hint="Type your topic or question..."
+                    android:inputType="textMultiLine"
+                    android:padding="15dp"
+                    android:textColor="#0F172A"
+                    android:textColorHint="#94A3B8"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnClearAI"
+                        android:layout_width="0dp"
+                        android:layout_height="52dp"
+                        android:layout_weight="1"
+                        android:text="CLEAR"
+                        android:textAllCaps="false"
+                        android:textColor="#475569"
+                        android:textSize="13sp"
+                        app:backgroundTint="#F1F5F9"
+                        app:cornerRadius="14dp"
+                        app:strokeColor="#CBD5E1"
+                        app:strokeWidth="1dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAskAI"
+                        android:layout_width="0dp"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="2"
+                        android:text="ASK CAMPUSMIND"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        app:backgroundTint="#2563EB"
+                        app:cornerRadius="14dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:text="💡 Tip: Ask specific questions for better answers."
+            android:textColor="#64748B"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</ScrollView>

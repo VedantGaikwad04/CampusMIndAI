@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FB"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textColor="#111827"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Manage your student profile and account."
+            android:textColor="#6B7280"
+            android:textSize="14sp" />
+
+        <!-- Profile Photo Card -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="22dp">
+
+                <ImageView
+                    android:id="@+id/ivProfilePhoto"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:background="@drawable/profile_circle"
+                    android:clipToOutline="true"
+                    android:contentDescription="Profile photo"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/profile_circle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="PROFILE PHOTO"
+                    android:textColor="#9CA3AF"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAddProfilePhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="10dp"
+                    android:text="ADD PROFILE PHOTO"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRemoveProfilePhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="8dp"
+                    android:text="REMOVE PHOTO"
+                    android:textColor="#DC2626"
+                    android:textSize="13sp"
+                    android:visibility="gone"
+                    app:backgroundTint="#FEF2F2"
+                    app:cornerRadius="16dp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Profile Information -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tvProfileName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Student"
+                    android:textColor="#111827"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvProfileEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="student@email.com"
+                    android:textColor="#6B7280"
+                    android:textSize="14sp" />
+
+                <!-- Completion -->
+
+                <TextView
+                    android:id="@+id/tvProfileCompletion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="Profile 0% complete"
+                    android:textColor="#2563EB"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    android:id="@+id/progressProfile"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="8dp"
+                    android:max="100"
+                    android:progress="0" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Academic Information -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ACADEMIC INFORMATION"
+                    android:textColor="#9CA3AF"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="College"
+                    android:textColor="#6B7280"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvProfileCollege"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Not added"
+                    android:textColor="#111827"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#E5E7EB" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Course"
+                    android:textColor="#6B7280"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvProfileCourse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Not added"
+                    android:textColor="#111827"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnEditProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="20dp"
+                    android:text="EDIT PROFILE"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="16dp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Logout -->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnProfileLogout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="20dp"
+            android:text="LOGOUT"
+            android:textColor="#DC2626"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:backgroundTint="#FEF2F2"
+            app:cornerRadius="18dp" />
+
+    </LinearLayout>
+
+</ScrollView>

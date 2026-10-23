@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "422895545346",
+    "project_id": "campusmindai-9af58",
+    "storage_bucket": "campusmindai-9af58.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:422895545346:android:a557be65bd8d898a5c8b1b",
+        "android_client_info": {
+          "package_name": "com.example.campusmindai"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC10azIV0TNLZLffkBObhe0jRTkVDIq0i8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

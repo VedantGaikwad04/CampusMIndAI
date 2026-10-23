@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Bluetooth permissions for Android 12+ -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADVERTISE" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_CONNECT" />
+
+    <!-- Legacy Bluetooth permissions for Android 11 and below -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN"
+        android:maxSdkVersion="30" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION"
+        android:maxSdkVersion="30" />
+    <!-- Bluetooth Low Energy -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN"
+        android:maxSdkVersion="30" />
+
+    <!-- Android 12 and above -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADVERTISE" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_CONNECT" />
+
+    <!-- Location permission for Bluetooth scanning on older Android -->
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION"
+        android:maxSdkVersion="30" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="false" />
+
+
+    <!-- Bluetooth permissions for Android 12 and above -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADVERTISE" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_CONNECT" />
+
+    <!-- Bluetooth permissions for Android 11 and below -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN"
+        android:maxSdkVersion="30" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION"
+        android:maxSdkVersion="30" />
+
+
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CampusMindAI">
+
+        <activity
+            android:name=".TeacherAttendanceActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".AttendanceActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".SubjectsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".AssignmentsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".AIActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".FocusActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".AnalyticsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".SubjectDetailsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".StudentAttendanceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TeacherAttendanceActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".RoleSelectionActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".TeacherDashboardActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".TeacherAttendanceHistoryActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".TeacherSettingsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".TeacherLiveAttendanceActivity"
+            android:exported="false" />
+
+
+
+    </application>
+
+</manifest>

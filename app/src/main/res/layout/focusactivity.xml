@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FB"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Focus Mode"
+            android:textColor="#111827"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Deep work starts with one focused session."
+            android:textColor="#6B7280"
+            android:textSize="14sp" />
+
+        <!-- Subject Selection -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="STUDYING"
+                    android:textColor="#9CA3AF"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Choose a subject"
+                    android:textColor="#111827"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinnerSubject"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Timer Card -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            app:cardBackgroundColor="#111827"
+            app:cardCornerRadius="26dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="28dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FOCUS SESSION"
+                    android:textColor="#9CA3AF"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <!-- Timer -->
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="245dp"
+                    android:layout_height="245dp"
+                    android:layout_marginTop="18dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="123dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvTimer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="45:00"
+                            android:textColor="#111827"
+                            android:textSize="48sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvFocusStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Ready to focus"
+                            android:textColor="#6B7280"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="45-minute focused study session"
+                    android:textColor="#D1D5DB"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Start / Pause -->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStartPause"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="20dp"
+            android:text="START"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:cornerRadius="18dp" />
+
+        <!-- Reset -->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReset"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp"
+            android:text="RESET"
+            android:textSize="14sp"
+            app:cornerRadius="18dp" />
+
+        <!-- Finish Session -->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFinishSession"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="10dp"
+            android:text="FINISH SESSION"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:cornerRadius="18dp" />
+
+        <!-- Tip -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="17dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💡 Focus tip"
+                    android:textColor="#111827"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Keep notifications away and concentrate on one subject until the session ends."
+                    android:textColor="#6B7280"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#1E293B"
+        android:layout_marginBottom="20dp" />
+
+    <EditText
+        android:id="@+id/etEditName"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:hint="Full Name"
+        android:textSize="16sp"
+        android:singleLine="true"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:backgroundTint="#2563EB"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="14dp" />
+
+    <EditText
+        android:id="@+id/etEditCollege"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:hint="College Name"
+        android:textSize="16sp"
+        android:singleLine="true"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:backgroundTint="#2563EB"
+        android:inputType="text"
+        android:layout_marginBottom="14dp" />
+
+    <EditText
+        android:id="@+id/etEditCourse"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:hint="Course"
+        android:textSize="16sp"
+        android:singleLine="true"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:backgroundTint="#2563EB"
+        android:inputType="text"
+        android:layout_marginBottom="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/btnCancelEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="CANCEL"
+            android:textStyle="bold"
+            android:textColor="#64748B"
+            android:backgroundTint="#E2E8F0"
+            android:layout_marginEnd="10dp" />
+
+        <Button
+            android:id="@+id/btnSaveEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="SAVE"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#2563EB" />
+
+    </LinearLayout>
+
+</LinearLayout>
